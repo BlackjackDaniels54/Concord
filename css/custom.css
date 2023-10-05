@@ -1,7 +1,7 @@
 .line-between {
     height: 1.5px;
     width: 100%;
-    background-color: var(--smoke);
+    background-color: var(--smoke);  
 }
 
 
@@ -152,7 +152,8 @@
     z-index: -1; 
 }
   .services-container {
-    margin-top: 150px;
+    background-image: linear-gradient(to bottom, #2c4a52, #35535a, #3f5d62, #49666a, #537072);
+    padding: 100px 0;
     
   }
   .services_bg-img-container .main-title {
@@ -163,7 +164,43 @@
     color: #fff;
     font-size: 80px;
   }
-  
+
+  .serive-title-item {
+    font-size: 20px;
+    border: 1px solid var(--smog);
+    border-radius: 7px;
+    padding: 10px;
+    transition: all .1s ease-in-out;
+    color: #fff;
+  }
+  .services-content {
+    font-size: 25px;
+    font-weight: 300;
+    color: #fff;
+  }
+  .serive-title-item:hover {
+    cursor: pointer;
+    transform: translateX(8px)
+    /* -webkit-box-shadow: 0px 0px 52px -17px rgba(255,255,255,0.5);
+    -moz-box-shadow: 0px 0px 52px -17px rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 52px -17px rgba(255,255,255,0.5); */
+  }
+  .serive-title-item.active {
+    border: 1px solid #000;
+    color: #000;
+    background-color: #fff;
+    transform: translatex(8px);
+  }
+  .serive-title-item-arrow i {
+    color: #fff;
+  }
+  .serive-title-item-arrow.active i {
+    color: #000;
+  }
+  @media (max-width: 992px) {
+
+  }
+
   @media (max-width: 560px) {
     .services_bg-img-container {
       height: 220px;
@@ -171,8 +208,51 @@
     .services_bg-img-container .main-title {
       font-size: 45px;
     }
+    .serive-title-item {
+      font-size: 16px;
+      padding: 5px;
+      font-weight: 300;
+    }
+    .services-content {
+      font-size: 18px;
+      font-weight: 300;
+      color: #fff;
+    }
+    .serive-title-item.active {
+      transform: translatex(5px);
+    }
+  }
+
+/* Определение ключевых кадров анимации */
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* Начальная непрозрачность */
+  }
+  100% {
+    opacity: 0; /* Конечная непрозрачность (полностью прозрачный) */
+  }
+  }
+
+  /* Применение анимации к элементу */
+  .element-to-fade {
+    animation: fadeOut 0.5s ease-in-out; /* Название анимации, продолжительность и функция плавности */
   }
 
 
+  @keyframes fadeIn {
+    0% {
+      transform: translateY(100%);
+      opacity: 0; /* Начальная непрозрачность */
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1; /* Конечная непрозрачность (полностью прозрачный) */
+    }
+    }
+  
+    /* Применение анимации к элементу */
+    .element-to-fadeIn {
+      animation: fadeIn 0.5s ease-in-out; /* Название анимации, продолжительность и функция плавности */
+    }
   /*--------------Services---------------*/
  /*--------------------------------------*/
