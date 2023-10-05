@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+html body .display-none {
+    display: none
+}
+
+html body .footer ul li {
+    color: var(--smog);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.2;
+    text-transform: uppercase !important;
+    transition: .5s
+}
+
+html body .about-mv h1 {
+    padding-bottom: 1rem !important
+}
+
+html body .about-mv h1 strong {
+    color: #000000 !important;
+    font-size: 45px !important;
+    font-weight: 300 !important
+}
+
+html body .about-mv p span {
+    color: #8b8b8b !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 1.75 !important
+}
+
+html body .about-mv ul {
+    margin-bottom: 0
+}
+
+html body .h-450 {
+    height: 450px
+}
+
+html body .latest-insights-box p {
+    width: 75% !important
+}
+
+html body .latest-insights-box p span {
+    color: #ffffff !important;
+    font-family: 'HelveticaNeue';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.44;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical
+}
+
+html body .insight-content p span {
+    color: #ffffff !important;
+    font-family: "HelveticaNeue";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.75;
+    width: 85%;
+    margin: 0 !important
+}
+
+html body .insights-carousel .carousel-caption p span {
+    color: #ffffff !important;
+    font-family: "HelveticaNeue";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5
+}
+
+html body .news-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 115px
+}
+@media (max-width: 900px) {
+    .main_content_news_block {
+        grid-gap: 20px !important;
+        grid-template-columns: repeat(2, 290px) !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    html body .news-text {
+        height:115px
+    }
+    .concord_news_block_title {
+        font-size: 40px !important;
+    }
+    /* .concord_news_block {
+        max-width: calc(100% - 80px) !important;
+        margin: 100px auto 50px auto !important;
+       
+    } */
+}
+
+@media (max-width: 575.98px) {
+    .main_content_news_block {
+        display: block !important;
+        padding: 20px !important;
+    }
+    .info_block {
+        
+        border: 0 !important;
+        
+    }
+    html body .news-text {
+        height:170px
+    }
+    .concord_news_block_title {
+        font-size: 30px !important;
+    }
+    html body .search-home-wrapper,html body .burger-home-wrapper {
+        width: 120px;
+        border-radius: 0 0 10px 10px;
+    }
+    .logo-home-wrapper {
+        text-align: center;
+        width: 120px;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .search-home-wrapper, .burger-home-wrapper {
+        height: 80px !important;
+    }
+    .section-home .logo-home-wrapper {
+        border-radius: 10px 10px 0 0 !important;
+    }
+    .burger-home-wrapper {
+        background-color: var(--smog);
+        transition: all .2s ease;
+        border-radius: 0 0 10px 10px;
+    }
+
+    html body .burger-home-wrapper>div div {
+        width: 36px
+    }
+
+    html body .search-home-wrapper>div,html body .burger-home-wrapper>div {
+        position: absolute;
+        top: 50%;
+        left: 13PX;
+        transform: translateY(-50%)
+    }
+
+    html body .mobile-title {
+        font-weight: 700;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.8;
+        text-transform: uppercase;
+        align-items: center;
+        transition: .5s;
+        vertical-align: middle;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+    html body .mobile-title.menu-title {
+        color: var(--blue-green);
+        right: 9px
+    }
+
+    html body .mobile-title.search-title {
+        color: #000000;
+        right: 7px
+    }
+
+    html body .search-icon img {
+        width: 24px
+    }
+
+    html body .news-text {
+        height: 105px
+    }
+}
+
+@media (min-width: 1600px){
+    
+}
+/*# sourceMappingURL=hellotree.min.css.map */
