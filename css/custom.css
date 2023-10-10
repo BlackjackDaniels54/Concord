@@ -25,9 +25,7 @@
 .info_block-date{
     color: var(--smoke);
 }
-.info_block-title{
 
-}
 .info_block-author{
     font-style: italic;
 
@@ -266,22 +264,15 @@
 }
 
 .contact-content_mapTitle {
-  font-size: 35px;
+  font-size: 30px;
 }
 .contact-content_mapAddress {
-  font-size: 25px;
+  font-size: 20px;
 }
 .fa-solid {
   color: rgb(204, 15, 15)
 }
-.fa-location-dot {
-}
-.mr-2 {
-}
-/* --blue-green: #2C4A52;
---farvarter: #537072;
---smoke: #8E9B97;
---smog: #F4EBDB; */
+
 .contact_bg-img-container::after {
 
   content: ''; /* Создаем пустой контент для псевдоэлемента */
@@ -304,6 +295,18 @@
 }
 .contact-content_inner-container {
   border-radius: 10px;
+}
+
+
+.form-control {
+  transition: none;
+  border: 1px solid #aeb7c0;
+}
+
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid #003cff;
 }
 
 @media (max-width: 560px) {
