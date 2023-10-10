@@ -10,7 +10,7 @@ function fillTitle(data){
             <div>${data.date}</div>
             <div><i>${data.author}</i></div>
         <div class=" mt-3 line-between"></div>
-    `;
+    `;  
 }
 
 fillTitle(headerData);
@@ -52,4 +52,5 @@ function showArticle(data) {
                 </div>
             </div>
         `;
+        
 }
