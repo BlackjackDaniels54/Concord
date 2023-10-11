@@ -1201,7 +1201,7 @@ textarea {
     line-height: 1.5;
     /* Text style for "practice a" */
     text-transform: uppercase;
-    transition: .2s;
+    transition: .1s;
 }
 
 .nav-bar-wrapper ul li span a:hover,

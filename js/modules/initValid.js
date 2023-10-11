@@ -9,6 +9,7 @@ export function initValid() {
           // Loop over them and prevent submission
           var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {
+              
               event.preventDefault();
               if (form.checkValidity() === false) {
                   event.stopPropagation();
@@ -34,55 +35,58 @@ function sendData(form) {
         message: form.querySelector('textarea[name="message"]').value
       }
      
-      showSpinner()
+      toggleSpinner();
       axios.post('https://artichecker.com/Concord/myapi/sendRequest', data)
             .then(res => {
-              hideSpinner();
-              Success();
-              $('#form').removeClass('was-validated')
+  
               form.reset();
+              $('#form').removeClass('was-validated');
+              toggleSpinner();
+              
           }).catch(function(error){
-              hideSpinner();
+            toggleSpinner();
               if (error.response && 
                   error.response.status === 400 && 
                   error.response.data &&
                   error.response.data.error) {
 
-                  console.log(error.response.data.error);
+                  console.log("" + error.response.data.error);
                   Danger("" + error.response.data.error);
               } else {
-                  Danger('Error 500. Bad request');
+                  Danger('Error 500. Server error');
               }
           }) 
       
 }
 
-
-function showSpinner() {
-
+function toggleSpinner() {
+    $('#fa-spin_custom').toggleClass('fa-spin_custom');
+    $('#btn_subm_custom').toggleClass('btn-primary');
+    $('#btn_subm_custom').toggleClass('btn-primary-outline');
+    $('#btn_subm_custom').hasClass('btn-primary-outline') ? 
+                          $('#btn_subm_custom span').html('Loading ...') :
+                          $('#btn_subm_custom span').html('Send form');
 }
 
-function hideSpinner() {
-
-}
 
 
-export function Toast() {
 
-// Находим ваш Toast по его ID
-var myToast = document.getElementById('liveToast');
+// export function Toast() {
 
-// Находим кнопку или элемент, который вызывает появление Toast
-var showToastButton = document.getElementById('showToast');
+// // Находим ваш Toast по его ID
+// var myToast = document.getElementById('liveToast');
 
-// Добавляем обработчик события на кнопку для отображения Toast
-showToastButton.addEventListener('click', function() {
-  var toast = new bootstrap.Toast(myToast);
-  toast.show();
-});
+// // Находим кнопку или элемент, который вызывает появление Toast
+// var showToastButton = document.getElementById('showToast');
 
-// Добавляем обработчик события, чтобы закрывать Toast при нажатии на крестик
-myToast.addEventListener('hidden.bs.toast', function() {
-  // Выполните нужные действия после закрытия Toast
-});
-}
+// // Добавляем обработчик события на кнопку для отображения Toast
+// showToastButton.addEventListener('click', function() {
+//   var toast = new bootstrap.Toast(myToast);
+//   toast.show();
+// });
+
+// // Добавляем обработчик события, чтобы закрывать Toast при нажатии на крестик
+// myToast.addEventListener('hidden.bs.toast', function() {
+//   // Выполните нужные действия после закрытия Toast
+// });
+// }

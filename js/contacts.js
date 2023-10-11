@@ -3,4 +3,4 @@ import { initValid, Toast } from "./modules/initValid";
 
 initValid();
 
-Toast();
+$('.toast').toast('show');
