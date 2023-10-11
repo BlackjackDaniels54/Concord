@@ -1193,7 +1193,7 @@ textarea {
     margin: 0;
 }
 
-.nav-bar-wrapper ul.upper li span {
+.nav-bar-wrapper ul.upper li span a {
     color: #ffffff;
     
     font-size: 35px;
@@ -1201,12 +1201,12 @@ textarea {
     line-height: 1.5;
     /* Text style for "practice a" */
     text-transform: uppercase;
-    transition: .5s;
+    transition: .2s;
 }
 
-.nav-bar-wrapper ul li span:hover,
-.nav-bar-wrapper ul.lower li span:hover {
-    color: var(--smoke);
+.nav-bar-wrapper ul li span a:hover,
+.nav-bar-wrapper ul.lower li span a:hover {
+    color: black;
     cursor: pointer;
 }
 
