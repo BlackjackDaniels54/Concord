@@ -190,7 +190,8 @@
     
   }
   .services_bg-img-container .main-title,
-  .contact_bg-img-container .main-title {
+  .contact_bg-img-container .main-title,
+  .about_bg-img-container .main-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,7 +283,8 @@
   
 }
 
- .contact_bg-img-container {
+ .contact_bg-img-container,
+ .about_bg-img-container {
   height: 280px;
   width: 100%;
   margin-top: 72px;
@@ -307,7 +309,14 @@
 .fa-solid {
   color: rgb(204, 15, 15)
 }
-
+.fa-triangle-exclamation {
+  color: #dc3545;
+  font-size: 20px;
+}
+.fa-square-check {
+    color: #28a745;
+    font-size: 20px;
+}
 .btn_subm_custom {
   padding: 12px 18px;
   font-size: 20px;
@@ -329,6 +338,18 @@
   z-index: 999999;
 }
 
+.toast_title {
+  font-size: 15px;
+  
+}
+
+.toast_title-red {
+  color: #dc3545;
+}
+.toast_title-green {
+  color: #28a745;
+}
+
 .toast {
   background-color: rgba(255, 255, 255, 0.96);
   flex-basis: 250px;
@@ -346,6 +367,21 @@
   background-size: cover;
   background-position: top 60% left 0%;
   filter: brightness(0.6); /* Пример фильтра (превращение в черно-белое изображение) */
+  z-index: -1; 
+}
+
+.about_bg-img-container::after {
+  content: ''; /* Создаем пустой контент для псевдоэлемента */
+  position: absolute; /* Устанавливаем абсолютную позицию */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../src/img/about_us.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top 50% left 0%;
+  filter: brightness(0.5); /* Пример фильтра (превращение в черно-белое изображение) */
   z-index: -1; 
 }
 
@@ -371,11 +407,14 @@
 
 @media (max-width: 560px) {
   .services_bg-img-container,
-  .contact_bg-img-container{
+  .contact_bg-img-container,
+  .about_bg-img-container {
     height: 220px;
   }
   .services_bg-img-container .main-title,
-  .contact_bg-img-container .main-title {
+  .contact_bg-img-container .main-title,
+  .about_bg-img-container .main-title
+  {
     font-size: 45px;
   }
   .serive-title-item {

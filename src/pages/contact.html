@@ -169,11 +169,13 @@
     
                           
                         </div>
+                        <div id="btn_subm_custom-container" class="d-flex justify-content-center justify-content-sm-start">
+                            <button id="btn_subm_custom" class="btn_subm_custom btn btn-primary my-5" type="submit">
+                                <i id="fa-spin_custom" class="fa-solid fa-circle-notch fa-spin fa-spin_custom" style="color:black;"></i>
+                                <span>Send form</span>
+                            </button>
+                        </div>
                         
-                        <button id="btn_subm_custom" class="btn_subm_custom btn btn-primary my-5" type="submit">
-                            <i id="fa-spin_custom" class="fa-solid fa-circle-notch fa-spin fa-spin_custom" style="color:black;"></i>
-                            <span>Send form</span>
-                        </button>
                       </form>
                       
                 </div>
@@ -223,27 +225,17 @@
     </section>
 
 
-    <!-- <div class="position-fixed w-100 d-flex flex-column custom_toast-container">
-        <div class="toast ml-auto" role="alert" data-delay="700" data-autohide="false">
-            <div class="toast-header">
-                <strong class="mr-auto text-primary">Toast</strong>
-                <small class="text-muted">Now</small>
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="toast-body"> Hey, there! This is a Bootstrap 4 toast. </div>
-        </div>
-    </div> -->
-   <!-- Flexbox container for aligning the toasts -->
-<div aria-live="polite" aria-atomic="true" class=" d-flex justify-content-center align-items-center" style="position: fixed; top: 5%; left: 2%; z-index: 9999;">
+
+<div aria-live="polite"  aria-atomic="true" class=" d-flex justify-content-left align-items-center" style="position: fixed; top: 4%; left: 1%; z-index: 9999;">
 
     <!-- Then put toasts within -->
-    <div class="toast" role="alert" data-autohide="false" aria-live="assertive" aria-atomic="true">
+    <div class="toast" role="alert"  data-autohide="false" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
-        <img src="" class="rounded mr-2" alt="...">
-        <strong class="mr-auto">Bootstrap</strong>
-        <small>11 mins ago</small>
+        <!-- <i class="fa-solid fa-triangle-exclamation mr-2"></i> -->
+        <i id="fa-check" class="fa-solid mr-2 "></i>
+
+        <strong class="mr-auto toast_title">Bootstrap</strong>
+        
         <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

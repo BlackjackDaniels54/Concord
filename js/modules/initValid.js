@@ -42,6 +42,7 @@ function sendData(form) {
               form.reset();
               $('#form').removeClass('was-validated');
               toggleSpinner();
+              Success();
               
           }).catch(function(error){
             toggleSpinner();
@@ -55,7 +56,7 @@ function sendData(form) {
               } else {
                   Danger('Error 500. Server error');
               }
-          }) 
+          }).finally(() => $('.toast').toast('show')) 
       
 }
 
@@ -69,7 +70,40 @@ function toggleSpinner() {
 }
 
 
+function Success(){
+    const toast = document.querySelector('.toast'),
+          toastIcon = toast.querySelector('#fa-check'),
+          toasttitle = toast.querySelector('.toast_title'),
+          toastBody = toast.querySelector('.toast-body');
+    
+    toastIcon.classList.contains('fa-triangle-exclamation') ?
+              toastIcon.classList.remove('fa-triangle-exclamation') :
+              false;
 
+    toastIcon.classList.add('fa-square-check');
+    toasttitle.classList.add('toast_title-green');
+    toasttitle.innerText = 'Success';
+    
+    toastBody.innerText = 'Our Info Team will contact you as soon as possible';
+    
+}
+function Danger(message){
+  const toast = document.querySelector('.toast'),
+        toastIcon = toast.querySelector('#fa-check'),
+        toasttitle = toast.querySelector('.toast_title'),
+        toastBody = toast.querySelector('.toast-body');
+  
+  toastIcon.classList.contains('fa-square-check') ?
+            toastIcon.classList.remove('fa-square-check') :
+            false;
+
+  toastIcon.classList.add('fa-triangle-exclamation');
+  toasttitle.classList.add('toast_title-red');
+  toasttitle.innerText = 'Error';
+  
+  toastBody.innerText = message;
+  
+}
 
 // export function Toast() {
 
