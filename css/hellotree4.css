@@ -1126,12 +1126,12 @@ textarea {
 .nav-menu-wrapper {
     position: fixed;
     height: 100%;
-    background-color: #07839d;
-    width: 50%;
+    background-color: #056782;
+    width: 40%;
     right: 0;
     z-index: 99999999;
     transform: translateX(100%);
-    transition: .5s;
+    transition: .3s;
     top: 0;
     /* display: block; */
 }
@@ -1150,6 +1150,18 @@ textarea {
     position: absolute;
     right: 30px;
     top: 30px;
+}
+
+.nav-menu-wrapper .closer-btn-container {
+    
+}
+.nav-menu-wrapper .closer-btn {
+    width: 50px;
+    transition: all 0.2s ease-in-out;
+}
+.nav-menu-wrapper .closer-btn:hover {
+    transform: rotate(90deg);
+
 }
 
 .search-bar-wrapper {
@@ -1206,10 +1218,14 @@ textarea {
 
 .nav-bar-wrapper ul li span a:hover,
 .nav-bar-wrapper ul.lower li span a:hover {
-    color: black;
+    color: rgb(228, 228, 228);
     cursor: pointer;
 }
 
+.nav-bar-wrapper ul.upper li span a:hover {
+    color: rgb(228, 228, 228);
+    cursor: pointer;
+}
 .nav-bar-wrapper div.line-sm {
     width: 102px;
     height: 1px;
