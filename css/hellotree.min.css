@@ -83,10 +83,7 @@ html body .news-text {
     height: 115px
 }
 @media (max-width: 900px) {
-    .main_content_news_block {
-        grid-gap: 20px !important;
-        grid-template-columns: repeat(2, 290px) !important;
-    }
+    
 }
 
 @media (max-width: 767.98px) {
@@ -96,18 +93,11 @@ html body .news-text {
     .concord_news_block_title {
         font-size: 40px !important;
     }
-    /* .concord_news_block {
-        max-width: calc(100% - 80px) !important;
-        margin: 100px auto 50px auto !important;
-       
-    } */
+  
 }
 
 @media (max-width: 575.98px) {
-    .main_content_news_block {
-        display: block !important;
-        padding: 20px !important;
-    }
+    
     .info_block {
         
         border: 0 !important;

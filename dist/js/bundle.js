@@ -16,16 +16,16 @@ __webpack_require__.r(__webpack_exports__);
 function ShowData(articles){
     const InfoContainer = document.querySelector('#custom_news-data');
     InfoContainer.innerHTML = null;
-    console.log(articles)
+    
 
-    InfoContainer.classList.remove('custom_spinner_preload-container')
-    InfoContainer.classList.add('main_content_news_block')
+    InfoContainer.classList.remove('custom_spinner_preload-container');
+    InfoContainer.classList.add('main_content_news_block','row','p-4', 'px-lg-2', 'g-4', 'justify-content-center', 'justify-content-sm-between');
     const listItems = articles.map(item => {
 
-        const a = document.createElement('a');
-        a.classList.add('info_block');
-        a.setAttribute('data-goto', item.url);
-        a.innerHTML = `
+        const div = document.createElement('div');
+        div.classList.add('info_block', 'col-12','col-sm-5', 'p-2');
+        div.setAttribute('data-goto', item.url);
+        div.innerHTML = `
                 <div class="info_block-img">
                     <img src="${item.image}">
                 </div>
@@ -35,7 +35,7 @@ function ShowData(articles){
                 <p class="info_block-excerpt">${item.excerpt}</p>
             
         `; 
-        return a;
+        return div;
       });
       listItems.forEach(item => {
         InfoContainer.append(item);
@@ -92,7 +92,6 @@ async function GetArticles() {
         const data = res.json();
         
         return data;
-
 
     }catch(e){
         console.log(e);

@@ -8,7 +8,6 @@ $('.burger-icon').on('click', function() {
                         $('.nav-menu-wrapper').addClass('show');
 });
 $('.search-menu-wrapper .closer-btn, .nav-menu-wrapper .closer-btn').on('click', function() {
-    console.log('Here it is');
     $(this).parent().removeClass('show');
 });
 $('ul.lower li.sub').on('click', function(e) {
