@@ -14,10 +14,11 @@ a {
     color: inherit;
 }
 :root {
-    --blue-green: #2C4A52;
-    --farvarter: #537072;
-    --smoke: #8E9B97;
-    --smog: #F4EBDB;
+    --dark-blue: #033540;
+    --semi-dark-blue: #015366;
+    --blue-gray: #63898C;
+    --light-blue: #A7D1D2;
+    --extra-light-blue: #E0F4F5;
   }
 
 h1, 
@@ -108,12 +109,12 @@ section .bg-img {
 }
 
 .burger-home-wrapper {
-    background-color: var(--smog);
+    background-color: var(--blue-gray);
     transition: all .2s ease;
     border-radius: 0 10px 10px 0;
 }
 .burger-home-wrapper:hover {
-    filter: brightness(.8);
+    filter: brightness(.91);
 }
 
 .search-home-wrapper {
@@ -413,7 +414,8 @@ a {
 
 
 .footer {
-    background-image: linear-gradient(180deg, var(--farvarter) 0%, var(--blue-green) 100%);
+    /* background-image: linear-gradient(180deg, var(--farvarter) 0%, var(--blue-green) 100%); */
+    background-image: linear-gradient(180deg, var(--semi-dark-blue) 50%, var(--dark-blue) 100%);
 }
 
 .footer ul {
@@ -451,9 +453,9 @@ nav {
     background-color: white;
 }
 
-.nav-burger {
-    background-color: var(--smog);
-}
+/* .nav-burger {
+    background-color: var(--light-blue);
+} */
 
 .page-title {
     color: #ffffff;
@@ -471,7 +473,7 @@ nav {
 }
 
 nav.nav-page {
-    background-color: var(--blue-green);
+    background-color: var(--semi-dark-blue);
     position: fixed;
     top: 0;
     left: 0;
@@ -1126,7 +1128,7 @@ textarea {
 .nav-menu-wrapper {
     position: fixed;
     height: 100%;
-    background-color: #056782;
+    background-color: var(--semi-dark-blue);
     width: 40%;
     right: 0;
     z-index: 99999999;
@@ -1140,6 +1142,8 @@ textarea {
     cursor: pointer;
 }
 
+
+
 .search-menu-wrapper.show,
 .nav-menu-wrapper.show {
     transform: translateX(0);
@@ -1148,8 +1152,8 @@ textarea {
 .search-menu-wrapper .closer-btn,
 .nav-menu-wrapper .closer-btn {
     position: absolute;
-    right: 30px;
-    top: 30px;
+    right: 10px;
+    top: 10px;
 }
 
 .nav-menu-wrapper .closer-btn-container {
@@ -1212,7 +1216,7 @@ textarea {
     font-weight: 700;
     line-height: 1.5;
     /* Text style for "practice a" */
-    text-transform: uppercase;
+    text-transform: uppercase !important;
     transition: .1s;
 }
 
@@ -1264,10 +1268,10 @@ textarea {
 }
 
 .burger-home-wrapper>div div {
-    width: 30px;
+    width: 35px;
     display: block;
     background-color: white;
-    border: 1px solid var(--blue-green);
+    border: 1.5px solid #fff;
     margin-bottom: 10px;
 }
 
@@ -1280,10 +1284,10 @@ textarea {
 }
 
 .nav-burger>div div {
-    width: 20px;
+    width: 25px;
     display: block;
     background-color: white;
-    border: 1.5px solid var(--blue-green);
+    border: 1.5px solid #fff;
     margin-bottom: 7px;
 }
 
@@ -1471,7 +1475,9 @@ textarea:focus,
     opacity: unset !important;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 103%);
 }
-
+.insights-index  {
+    background-color: var(--extra-light-blue);
+}
 .insights-index h6 {
     color: #000000;
    
@@ -1796,7 +1802,7 @@ textarea:focus,
 .concord_news_block {
     /* max-width: calc(100% - 200px);
     margin: 120px auto 50px auto; */
-    color: var(--blue-green);
+    color: var(--semi-dark-blue);
 }
 .concord_news_block_title {
     font-size: 50px;

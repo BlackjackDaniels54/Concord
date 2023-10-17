@@ -38,5 +38,26 @@ export function ServicesData() {
         }
       ];
       
-      
+}
+
+
+export function aboutInfo(i) {
+  const Arr = [
+    [
+      "Concord is a leading law firm with four offices located in the capitals of the countries we serve: London, Berlin, Amsterdam, and Athens. Our firm has over 2500 successful cases to our credit and a team of 15 highly skilled lawyers from all over the world.",
+      "At Concord, we are committed to providing exceptional legal services to our clients across Europe. Our team of experienced attorneys is dedicated to achieving the best possible outcomes for our clients in a wide range of legal matters.",
+      "With a wealth of experience and expertise, our lawyers have successfully represented clients in various areas of practice, including criminal law, tax law, family law, and more. We have a proven track record of success, and our firm is recognized as a leader in the legal industry.",
+      "At Concord, we pride ourselves on delivering personalized service and effective solutions that meet our clients' unique needs. We work closely with our clients to understand their goals and develop strategies to achieve the best possible outcomes.",
+      "We believe that our success is a result of our commitment to our clients and our values of integrity, client focus, excellence, collaboration. Contact us today to learn more about how we can help you with your legal needs."
+    ],
+    [
+      "Integrity: We are committed to conducting ourselves with honesty, transparency, and ethical behavior in all aspects of our practice.",
+      "Client-focused: We prioritize our clients' needs and interests above all else, and strive to provide them with the highest level of service and care.",
+      "Excellence: We are dedicated to maintaining a high standard of quality in our work and continuously improving our skills and knowledge to deliver exceptional results for our clients.",
+      "Collaboration: We believe in working together as a team to leverage our collective knowledge and expertise to provide the best possible outcomes for our clients.",
+      "These values serve as a guide for our firm's culture and behavior, and help us to maintain our commitment to providing the highest quality legal services to our clients."
+    ]
+  ]
+
+  return Arr[i];
 }

@@ -105,22 +105,3 @@ function Danger(message){
   
 }
 
-// export function Toast() {
-
-// // Находим ваш Toast по его ID
-// var myToast = document.getElementById('liveToast');
-
-// // Находим кнопку или элемент, который вызывает появление Toast
-// var showToastButton = document.getElementById('showToast');
-
-// // Добавляем обработчик события на кнопку для отображения Toast
-// showToastButton.addEventListener('click', function() {
-//   var toast = new bootstrap.Toast(myToast);
-//   toast.show();
-// });
-
-// // Добавляем обработчик события, чтобы закрывать Toast при нажатии на крестик
-// myToast.addEventListener('hidden.bs.toast', function() {
-//   // Выполните нужные действия после закрытия Toast
-// });
-// }

@@ -25,7 +25,8 @@ module.exports = {
     entry: {
         bundle: './js/main.js',
         bundle2: './js/services.js',
-        contacts:'./js/contacts.js'
+        contacts:'./js/contacts.js',
+        about: './js/about_us.js'
     },
     output: {
         filename: '[name].js', // Используем [name] для динамического имени файла на основе ключа entry

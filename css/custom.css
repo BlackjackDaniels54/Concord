@@ -5,13 +5,13 @@
 .line-between {
     height: 1.5px;
     width: 100%;
-    background-color: var(--smoke);  
+    background-color: var(--dark-blue);  
 }
 
 
 .info_block {
     /* padding: 10px; */
-    border: 1px solid var(--farvarter); 
+    border: 1px solid var(--semi-dark-blue); 
     border-radius: 5px;
     transition: all .3s ease;
     max-width: 410px;
@@ -190,7 +190,8 @@
     z-index: -1; 
 }
   .services-container {
-    background-image: linear-gradient(to bottom, #2c4a52, #35535a, #3f5d62, #49666a, #537072);
+    /* background-image: linear-gradient(to bottom, #2c4a52, #35535a, #3f5d62, #49666a, #537072); */
+    background-color: var(--light-blue);
     padding: 100px 0;
     
   }
@@ -207,35 +208,33 @@
 
   .serive-title-item {
     font-size: 20px;
-    border: 1px solid var(--smog);
+    border: 1px solid var(--dark-blue);
     border-radius: 7px;
     padding: 10px;
     transition: all .1s ease-in-out;
-    color: #fff;
+    color: var(--dark-blue);
   }
   .services-content {
     font-size: 25px;
     font-weight: 300;
-    color: #fff;
+    color: var(--dark-blue);
   }
   .serive-title-item:hover {
     cursor: pointer;
     transform: translateX(8px)
-    /* -webkit-box-shadow: 0px 0px 52px -17px rgba(255,255,255,0.5);
-    -moz-box-shadow: 0px 0px 52px -17px rgba(255,255,255,0.5);
-    box-shadow: 0px 0px 52px -17px rgba(255,255,255,0.5); */
+    
   }
   .serive-title-item.active {
-    border: 1px solid #000;
-    color: #000;
-    background-color: #fff;
+    border: 1px solid var(--semi-dark-blue);
+    color: #fff;
+    background-color: var(--semi-dark-blue);
     transform: translatex(8px);
   }
   .serive-title-item-arrow i {
-    color: #fff;
+    color: var(--dark-blue);
   }
   .serive-title-item-arrow.active i {
-    color: #000;
+    color: #fff;
   }
   @media (max-width: 992px) {
 
@@ -445,3 +444,34 @@
     font-size: 18px;
   }
 }
+
+
+
+
+/*-------------------About Us-----------------*/
+/*--------------------------------------------*/
+/* #6fa0a4 */
+.about_us-tabs-container {
+  background-color: var(--semi-dark-blue);  
+  font-size: 25px;
+  color: #fff;
+  font-family: 'Gilroy';
+}
+.about_us-tab {
+  transition: all .3s;
+}
+.about_us-tab.active {
+  background-color: var(--extra-light-blue);
+  color: var(--dark-blue);
+  
+}
+.about_us-tab:hover {
+  cursor: pointer;
+}
+#about_us-content {
+  font-family: 'Gilroy';
+  font-size: 1.5rem;
+  color: var(--semi-dark-blue);
+}
+
+/* rgb(205, 240, 240); */

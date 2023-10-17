@@ -2,88 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./js/modules/serviceTabs.js":
-/*!***********************************!*\
-  !*** ./js/modules/serviceTabs.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ServicesTabs: () => (/* binding */ ServicesTabs)
-/* harmony export */ });
-/* harmony import */ var _textData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textData */ "./js/modules/textData.js");
-
-
-function ServicesTabs() {
-    const data = (0,_textData__WEBPACK_IMPORTED_MODULE_0__.ServicesData)(), // Получение заголовков и статей 
-          titles = document.querySelector('.services-titles'), // Контейнер заголовков
-          content = document.querySelector('.services-content'); // Контейнер статей
-
-// Перебор данных и отрисовка заголовков 
-
-    data.forEach((obj, index) => {
-        titles.innerHTML += `
-            <div data-id="${index}" class="serive-title-item d-flex justify-content-between mt-3">
-                <div class="serive-title-item-text">
-                    ${obj.title}
-                </div>
-                <div class="serive-title-item-arrow">
-                    <i class="fa-solid fa-chevron-right" ></i>
-                </div>
-            </div>
-        `;
-    })
-//Слушатель событий клика по заголовкам 
-
-    titles.addEventListener("click", (e) => { 
-        const target = e.target.closest('.serive-title-item'); // Фильтрация и поиск подходящего
-        if(!target.classList.contains('active')) {
-            clearActive();
-            activeTab(target);
-            setTimeout(() => {
-                showArticle(Number(target.getAttribute('data-id')));
-            }, 450);
-            
-        }
-    })
-
-    function clearActive(){
-        const titleItems = document.querySelectorAll('.serive-title-item'),
-              serviceContentContainer = document.querySelector('.services-content-container');
-        titleItems.forEach(elem => {
-            const titleIcon = elem.querySelector('.serive-title-item-arrow');
-            titleIcon.classList.remove('active');
-            elem.classList.remove('active');
-        })
-        serviceContentContainer.classList.remove('element-to-fadeIn');
-        serviceContentContainer.classList.add('element-to-fade');
-
-        setTimeout(() => {
-            content.innerHTML = null;
-        }, 350);
-        
-    }
-
-    function activeTab(elem){
-        const titleIcon = elem.querySelector('.serive-title-item-arrow');
-        titleIcon.classList.add('active');
-        elem.classList.add('active');
-    }
-
-    function showArticle(id) {
-        content.innerHTML = `
-        <div class="services-content-container element-to-fadeIn">
-            ${data[id].description}
-        </div>
-        `;
-    }
-    showArticle(0);
-    activeTab(document.querySelector('.serive-title-item'));
-}
-
-/***/ }),
-
 /***/ "./js/modules/textData.js":
 /*!********************************!*\
   !*** ./js/modules/textData.js ***!
@@ -221,16 +139,39 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 /*!************************!*\
-  !*** ./js/services.js ***!
+  !*** ./js/about_us.js ***!
   \************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_serviceTabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/serviceTabs */ "./js/modules/serviceTabs.js");
+/* harmony import */ var _modules_textData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/textData */ "./js/modules/textData.js");
 
 
 
-(0,_modules_serviceTabs__WEBPACK_IMPORTED_MODULE_0__.ServicesTabs)();
+
+$('.about_us-tab').on('click', (e) => {
+    const tab = e.target,
+          idTab = Number(tab.getAttribute('data-id'));
+
+    if(!tab.classList.contains('active')) {
+        $('.about_us-tab').removeClass('active');
+        tab.classList.add('active');
+        $('.about_bg-img-container .main-title').text(tab.innerText);
+        fillContainer((0,_modules_textData__WEBPACK_IMPORTED_MODULE_0__.aboutInfo)(idTab));
+    }
+})
+
+
+fillContainer((0,_modules_textData__WEBPACK_IMPORTED_MODULE_0__.aboutInfo)(0));
+function fillContainer(arr) {
+    const container = $('#about_us-content');
+          container[0].innerText = null;
+    arr.forEach(paragraph => {
+        container[0].innerHTML += `
+        <p>${paragraph}</p>
+        `;
+    });
+}
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle2.js.map
+//# sourceMappingURL=about.js.map

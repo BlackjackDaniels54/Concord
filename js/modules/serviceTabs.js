@@ -1,4 +1,4 @@
-import { ServicesData } from "./servicesData";
+import { ServicesData } from "./textData";
 
 export function ServicesTabs() {
     const data = ServicesData(), // Получение заголовков и статей 
