@@ -225,12 +225,12 @@ div.line {
 }
 
 .btn-black {
-    background-color: var(--blue-green);
-    color: var(--smog);
+    background-color: var(--semi-dark-blue);
+    color: #fff;
     
     font-size: 20px;
     font-weight: 700;
-    transition: .5s;
+    transition: .2s;
     border-radius: 0;
 }
 
@@ -239,22 +239,22 @@ div.line {
 }
 
 .btn-black:hover {
-    color: var(--blue-green);
-    background-color: var(--smog);
-    transform: translateY(-15px);
+    color: var(--semi-dark-blue);
+    background-color: #fff;
+    transform: translateY(-10px);
     scale: (1.05);
-    -webkit-box-shadow: 0px 15px 30px 0px rgba(44,74,82,0.52);
-    -moz-box-shadow: 0px 15px 30px 0px rgba(44,74,82,0.52);
-    box-shadow: 0px 15px 30px 0px rgba(44,74,82,0.52);
+    -webkit-box-shadow: 0px 15px 30px 0px rgba(83, 193, 223, 0.2);
+    -moz-box-shadow: 0px 15px 30px 0px rgba(83, 193, 223, 0.2);
+    box-shadow: 0px 15px 30px 0px rgba(83, 193, 223, 0.2);
 }
 
 .btn-white {
     background-color: white;
-    color: #ac8b33;
+    
     
     font-size: 20px;
     font-weight: 700;
-    transition: .5s;
+    transition: .1s;
 }
 .custom_styles_burger {
     transition: all .3s ease;
@@ -1289,7 +1289,28 @@ textarea {
     background-color: white;
     border: 1.5px solid #fff;
     margin-bottom: 7px;
+    animation-duration: 0.2s;
+    
 }
+
+@keyframes dynamicWidth {
+    0% {
+        width: 25px;
+        
+    }
+    50% {
+        width: 30px;
+       
+    }
+    100% {
+        width: 25px;
+        
+    }
+}
+
+.nav-burger:hover .nav-burger-line {
+    animation-name: dynamicWidth ;
+} 
 
 .nav-burger>div div:nth-child(3) {
     margin-bottom: 0;

@@ -7,7 +7,9 @@
     width: 100%;
     background-color: var(--dark-blue);  
 }
-
+.our_team-container {
+    background-color: var(--extra-light-blue);
+}
 
 .info_block {
     /* padding: 10px; */
@@ -15,6 +17,7 @@
     border-radius: 5px;
     transition: all .3s ease;
     max-width: 410px;
+    background-color: #fff;
 }
 .info_block:hover {
     cursor: pointer;
@@ -213,6 +216,7 @@
     padding: 10px;
     transition: all .1s ease-in-out;
     color: var(--dark-blue);
+    background-color: var(--extra-light-blue);
   }
   .services-content {
     font-size: 25px;
@@ -455,7 +459,7 @@
   background-color: var(--semi-dark-blue);  
   font-size: 25px;
   color: #fff;
-  font-family: 'Gilroy';
+  
 }
 .about_us-tab {
   transition: all .3s;
@@ -469,8 +473,8 @@
   cursor: pointer;
 }
 #about_us-content {
-  font-family: 'Gilroy';
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   color: var(--semi-dark-blue);
 }
 
