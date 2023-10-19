@@ -1292,7 +1292,9 @@ textarea {
     animation-duration: 0.2s;
     
 }
-
+.text-white {
+    color: var(--light-blue) !important;
+}
 @keyframes dynamicWidth {
     0% {
         width: 25px;
