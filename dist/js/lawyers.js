@@ -1,4 +1,20 @@
-export function ServicesData() {
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./js/modules/textData.js":
+/*!********************************!*\
+  !*** ./js/modules/textData.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Lawyers: () => (/* binding */ Lawyers),
+/* harmony export */   ServicesData: () => (/* binding */ ServicesData),
+/* harmony export */   aboutInfo: () => (/* binding */ aboutInfo)
+/* harmony export */ });
+function ServicesData() {
     return  [
         {
           title: "Corporate Law",
@@ -41,7 +57,7 @@ export function ServicesData() {
 }
 
 
-export function aboutInfo(i) {
+function aboutInfo(i) {
   const Arr = [
     [
       "Concord is a leading law firm with four offices located in the capitals of the countries we serve: London, Berlin, Amsterdam, and Athens. Our firm has over 2500 successful cases to our credit and a team of 15 highly skilled lawyers from all over the world.",
@@ -64,7 +80,7 @@ export function aboutInfo(i) {
 
 
 
-export function Lawyers() {
+function Lawyers() {
   return [
     {
         image: "2.jpg",
@@ -132,3 +148,92 @@ export function Lawyers() {
 ];
 
 }
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!***********************!*\
+  !*** ./js/lawyers.js ***!
+  \***********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_textData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/textData */ "./js/modules/textData.js");
+
+
+const data = (0,_modules_textData__WEBPACK_IMPORTED_MODULE_0__.Lawyers)();
+const body = document.querySelector('body');
+body.innerHTML = null;
+
+data.forEach((lawyer, index) => {
+    const div = document.createElement('div');
+    div.innerHTML = `
+        <img src="../img/lawyers/${lawyer.image}">
+        <h5>${lawyer.name}</h5>
+        <h5>${lawyer.surname}</h5>
+    `;
+
+    body.append(div);
+})
+
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=lawyers.js.map

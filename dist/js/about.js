@@ -10,6 +10,7 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Lawyers: () => (/* binding */ Lawyers),
 /* harmony export */   ServicesData: () => (/* binding */ ServicesData),
 /* harmony export */   aboutInfo: () => (/* binding */ aboutInfo)
 /* harmony export */ });
@@ -75,6 +76,77 @@ function aboutInfo(i) {
   ]
 
   return Arr[i];
+}
+
+
+
+function Lawyers() {
+  return [
+    {
+        image: "2.jpg",
+        name: "John",
+        surname: "Ramdjanbeg",
+        city: "Berlin",
+        email: "john.ramdjanbeg@concord-services.org"
+    },
+    {
+        image: "2beee6e5be8bd4601203b5bb51fa0af9.jpg",
+        name: "Yusuf",
+        surname: "Sarikaya",
+        city: "Athens",
+        email: "yusuf.sarikaya@concord-services.org"
+    },
+    {
+        image: "5454.jpg",
+        name: "Luke",
+        surname: "Lambell",
+        city: "London",
+        email: "luke.lambell@concord-services.org"
+    },
+    {
+        image: "arturas_liutvinas.jpg",
+        name: "Artūras",
+        surname: "Liutvinas",
+        city: "Berlin",
+        email: "arturas.liutvinas@concord-services.org"
+    },
+    {
+        image: "6.jpg",
+        name: "Neill",
+        surname: "Blundell",
+        city: "London",
+        email: "neill.blundell@concord-services.org"
+    },
+    {
+        image: "7.jpg",
+        name: "Daniel",
+        surname: "Delannoy",
+        city: "Amsterdam",
+        email: "daniel.delannoy@concord-services.org"
+    },
+    {
+        image: "d6183b97d50087e1bd01a60315b11b84.png",
+        name: "James",
+        surname: "Stewart",
+        city: "London",
+        email: "james.stewart@concord-services.org"
+    },
+    {
+        image: "image_2023-10-06_12-05-10.png",
+        name: "Patrick",
+        surname: "Oranje",
+        city: "Amsterdam",
+        email: "patrick.oranje@concord-services.org"
+    },
+    {
+        image: "e3rr45gji45.jpeg",
+        name: "Agnes",
+        surname: "Aldenhoven",
+        city: "Amsterdam",
+        email: "agnes.aldenhoven@concord-services.org"
+    }
+];
+
 }
 
 /***/ })
