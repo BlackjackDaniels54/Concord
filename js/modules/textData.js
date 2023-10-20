@@ -128,6 +128,20 @@ export function Lawyers() {
         surname: "Aldenhoven",
         city: "Amsterdam",
         email: "agnes.aldenhoven@concord-services.org"
+    },
+    {
+      image: "IMG_0638.JPG",
+      name: "Batur",
+      surname: "Dimou",
+      city: "Athens",
+      email: "batur.dimou@concord-services.org"
+    },
+    {
+      image: "udo_schneider.jpeg",
+      name: "Udo",
+      surname: "Schneider",
+      city: "Berlin",
+      email: "udo.schneider@concord-services.org"
     }
 ];
 

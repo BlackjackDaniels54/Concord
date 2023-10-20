@@ -1,15 +1,28 @@
 import { Lawyers } from "./modules/textData";
 
 const data = Lawyers();
-const body = document.querySelector('body');
+const body = document.querySelector('#lawyer-card_container');
 body.innerHTML = null;
 
 data.forEach((lawyer, index) => {
     const div = document.createElement('div');
+    div.classList.add('col-sm-6', 'col-lg-4', 'mb-5', 'employee');
+    div.setAttribute('data-id', index);
     div.innerHTML = `
-        <img src="../img/lawyers/${lawyer.image}">
-        <h5>${lawyer.name}</h5>
-        <h5>${lawyer.surname}</h5>
+    
+        <div class="lawyer-card_container">
+            <div class="lawyer-card_content">
+                <div class="mb-4 img-lawyer-card_container">
+                    <img src="../img/lawyers/${lawyer.image}" alt="">
+                </div>
+                <div class="lawyer-info_container mb-3">
+                    <div class="lawyer-name">${lawyer.name + ' ' + lawyer.surname}</div>
+                    <div class="lawyer-city">${lawyer.city}</div>
+                    <div class="lawyer-email">${lawyer.email}</div>
+                </div>
+            </div>
+        </div>
+    
     `;
 
     body.append(div);

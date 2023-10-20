@@ -144,6 +144,20 @@ function Lawyers() {
         surname: "Aldenhoven",
         city: "Amsterdam",
         email: "agnes.aldenhoven@concord-services.org"
+    },
+    {
+      image: "IMG_0638.JPG",
+      name: "Batur",
+      surname: "Dimou",
+      city: "Athens",
+      email: "batur.dimou@concord-services.org"
+    },
+    {
+      image: "udo_schneider.jpeg",
+      name: "Udo",
+      surname: "Schneider",
+      city: "Berlin",
+      email: "udo.schneider@concord-services.org"
     }
 ];
 
@@ -218,15 +232,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const data = (0,_modules_textData__WEBPACK_IMPORTED_MODULE_0__.Lawyers)();
-const body = document.querySelector('body');
+const body = document.querySelector('#lawyer-card_container');
 body.innerHTML = null;
 
 data.forEach((lawyer, index) => {
     const div = document.createElement('div');
+    div.classList.add('col-sm-6', 'col-lg-4', 'mb-5', 'employee');
+    div.setAttribute('data-id', index);
     div.innerHTML = `
-        <img src="../img/lawyers/${lawyer.image}">
-        <h5>${lawyer.name}</h5>
-        <h5>${lawyer.surname}</h5>
+    
+        <div class="lawyer-card_container">
+            <div class="lawyer-card_content">
+                <div class="mb-4 img-lawyer-card_container">
+                    <img src="../img/lawyers/${lawyer.image}" alt="">
+                </div>
+                <div class="lawyer-info_container mb-3">
+                    <div class="lawyer-name">${lawyer.name + ' ' + lawyer.surname}</div>
+                    <div class="lawyer-city">${lawyer.city}</div>
+                    <div class="lawyer-email">${lawyer.email}</div>
+                </div>
+            </div>
+        </div>
+    
     `;
 
     body.append(div);

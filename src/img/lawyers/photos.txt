@@ -54,8 +54,18 @@ agnes.aldenhoven@concord-services.org
 
 
 
-IMG_0638.JPG
-Peter_Golden_London_Web_High_Res_bu7ef4.jpeg
+IMG_0638.JPG,
+Batur,
+Dimou,
+Athens,
+batur.dimou@concord-services.org
+
+udo_schneider.jpeg,
+Udo,
+Schneider,
+Berlin,
+udo.schneider@concord-services.org
+
 
 
 

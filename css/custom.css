@@ -480,4 +480,111 @@
   color: var(--semi-dark-blue);
 }
 
-/* rgb(205, 240, 240); */
+
+
+/*------------------Lawyers-------------------*/
+/*--------------------------------------------*/
+
+.lawyer-card_container {
+position: relative;
+max-width: 300px;
+height: 450px;
+margin: auto;
+display: flex;
+
+justify-content: center;
+align-items: center;
+
+
+}
+.lawyer-card_container::before, div::after {
+content: "";
+position: absolute;
+width: 15px;
+height: 15px;
+transition: 0.3s ease-in-out;
+}
+.lawyer-card_container::before {
+top: -5px;
+left: -5px;
+border-top: 1.5px solid var(--blue-gray);
+border-left: 1.5px solid var(--blue-gray);
+}
+.lawyer-card_container::after {
+right: -5px;
+bottom: -5px;
+border-bottom: 1.5px solid var(--blue-gray);
+border-right: 1.5px solid var(--blue-gray);
+}
+.lawyer-card_container:hover::before, .lawyer-card_container:hover::after {
+width: calc(100% + 9px);
+height: calc(100% + 9px);
+}
+
+.lawyer-info_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.img-lawyer-card_container {
+  overflow: hidden;
+  max-width: 300px;
+  max-height: 300px;
+  
+}
+.img-lawyer-card_container img {
+  width: 100%;
+  transform: scale(1.5);
+  
+}
+
+
+.employee[data-id="0"] .img-lawyer-card_container img {
+    transform: scale(2.8);
+    margin-top: 142px;
+    margin-left: 31px;
+}
+.employee[data-id="1"] .img-lawyer-card_container img {
+  transform: scale(1);
+}
+.employee[data-id="2"] .img-lawyer-card_container img {
+  transform: scale(1.5);
+  margin-left: -34px;
+}
+.employee[data-id="3"] .img-lawyer-card_container img {
+  transform: scale(1.2);
+  margin-top: 20px;
+}
+.employee[data-id="4"] .img-lawyer-card_container img {
+  transform: scale(2.3);
+  margin-top: 122px;
+}
+.employee[data-id="5"] .img-lawyer-card_container img {
+  transform: scale(1.4);
+  margin-top: 74px;
+}
+.employee[data-id="6"] .img-lawyer-card_container img {
+  transform: scale(1);
+}
+
+.employee[data-id="7"] .img-lawyer-card_container img {
+  transform: scale(2.95);
+  margin-top: 147px;
+  margin-left: 10px;
+}
+
+.employee[data-id="8"] .img-lawyer-card_container img {
+  transform: scale(1.2);
+  margin-top: 20px;
+}
+.employee[data-id="9"] .img-lawyer-card_container img {
+    transform: scale(2.4);
+    margin-top: 123px;
+    margin-left: -122px;
+}
+.employee[data-id="10"] .img-lawyer-card_container img {
+  transform: scale(1);
+  margin-top: 36px;
+}
