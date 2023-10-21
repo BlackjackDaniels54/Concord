@@ -488,31 +488,44 @@
 .lawyers_bg-img-container {
   position: relative;
   margin-top: 72px;
+  height: 70vh;
 }
-
+.lawyers_bg-img-container .main-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: #fff;
+  z-index: 10;
+  background-size: cover;
+}
 .lawyers_video-container {
-  height: 280px; /* Ширина для экранов шире 576px */
+  height: 100%; /* Ширина для экранов шире 576px */
   width: 100%; /* Максимальная ширина для меньших экранов */
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-video {
-  width: 100%;
-  height: auto;
-  margin-top: -27px;
-}
-
-.overlay {
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
+}
+.lawyers_video-container video {
+  position: relative;
+}
+.lawyers_video-container video::after {
+  content: '';
+  position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-  z-index: 1; /* Разместить фильтр поверх видео */
+  background-color: rgba(0,0,0,1);
 }
+.lawyers_video-container #lawyers_video-pc {
+  
+  
+}
+.lawyers_video-container #lawyers_video-modile  {
+    display: none;
+}
+
 
 
 
@@ -530,7 +543,7 @@ background-color: var(--extra-light-blue);
 
 }
 
-.lawyer-card_container::before, div::after {
+.lawyer-card_container::before, .lawyer-card_container::after {
   content: "";
   position: absolute;
   width: 15px;
@@ -652,15 +665,37 @@ background-color: var(--extra-light-blue);
     margin-top: 40px;
 }
 @media screen and (max-width: 576px) {
-  .lawyers_video-container {
-      height: 240px; /* Ширина для экранов меньше 576px */
+  .lawyers_bg-img-container .main-title {
+    font-size: 2rem;
   }
-  .lawyers_video-container video {
-      margin-top: 107px;
-      transform: scale(2);
+  .lawyers_video-container #lawyers_video-pc {
+    display: none;
   }
+  .lawyers_video-container #lawyers_video-modile  {
+      display: block;
+      transform: scale(0.7);
+      margin-top: -654px;
+      margin-left: -259px;
+  }
+  
 }
+
+@media  screen and (min-width:1920px) {
+  .lawyers_video-container #lawyers_video-pc {
+    object-fit:0;
+    
+    width: 100%;
+}
+
+}
+
 @media screen and (min-width: 576px) and (max-width: 991px) {
+  .lawyers_video-container #lawyers_video-pc {
+    transform: scale(0.8);
+    margin-top: -132px;
+    margin-left: -653px;
+  }
+  
   .img-lawyer-card_container {
       max-height: 240px;
   }
