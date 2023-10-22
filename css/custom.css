@@ -507,6 +507,16 @@
   top: 0;
   left: 0;
   overflow: hidden;
+  
+}
+
+.video-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
 }
 .lawyers_video-container video {
   position: relative;
@@ -665,6 +675,9 @@ background-color: var(--extra-light-blue);
     margin-top: 40px;
 }
 @media screen and (max-width: 576px) {
+  .lawyers_bg-img-container {
+    height: 50vh;
+  }
   .lawyers_bg-img-container .main-title {
     font-size: 2rem;
   }
@@ -695,7 +708,10 @@ background-color: var(--extra-light-blue);
     margin-top: -132px;
     margin-left: -653px;
   }
-  
+  .lawyers_bg-img-container {
+   
+    height: 50vh;
+  }
   .img-lawyer-card_container {
       max-height: 240px;
   }
