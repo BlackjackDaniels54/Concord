@@ -98,7 +98,7 @@
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: var(--info);
+    background: var(--bs-info);
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
   .lds-ellipsis div:nth-child(1) {
@@ -167,7 +167,11 @@
     initial-letter: 2;
   }
 
-
+  .footer-links {
+    text-align: left;
+    
+  }
+ 
 
   /*--------------Services---------------*/
  /*--------------------------------------*/
@@ -207,6 +211,7 @@
     height: 100%;
     color: #fff;
     font-size: 80px;
+    user-select: none;
   }
 
   .serive-title-item {
@@ -491,11 +496,14 @@
   height: 70vh;
 }
 .lawyers_bg-img-container .main-title {
+  user-select: none;
+  width: 100%;
+  text-align: center;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%);
-  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
   color: #fff;
   z-index: 10;
   background-size: cover;
@@ -553,6 +561,14 @@ background-color: var(--extra-light-blue);
 
 }
 
+.lawyer-name {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.lawyer-city {
+  font-size: 1.1rem;
+}
+
 .lawyer-card_container::before, .lawyer-card_container::after {
   content: "";
   position: absolute;
@@ -597,6 +613,7 @@ background-color: var(--extra-light-blue);
 }
 
 .lawyer-email {
+  font-size: 0.95rem;
   position: relative;
   z-index: 10;
 }
@@ -679,7 +696,7 @@ background-color: var(--extra-light-blue);
     height: 50vh;
   }
   .lawyers_bg-img-container .main-title {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
   .lawyers_video-container #lawyers_video-pc {
     display: none;
@@ -703,6 +720,9 @@ background-color: var(--extra-light-blue);
 }
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
+  .lawyers_bg-img-container .main-title {
+    font-size: 5rem;
+  }
   .lawyers_video-container #lawyers_video-pc {
     transform: scale(0.8);
     margin-top: -132px;
