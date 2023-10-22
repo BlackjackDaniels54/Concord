@@ -18,6 +18,15 @@
     <title>Lawyers</title>
 </head>
 <body>
+
+    <div class="loader-container">
+        <div class="container w-100 text-center">
+            <div class="loader-counter">0%</div>
+            <div class="loader-line"></div>
+        </div>
+        
+    </div>
+
     <div class="nav-menu-wrapper">
         <img src="../img/icons/close-svgrepo-com.svg" class="closer-btn cursor-pointer" alt="close">
         <div class="nav-bar-wrapper text-center">
@@ -59,10 +68,10 @@
     </nav>
     <section class="lawyers_bg-img-container">
         <div class="lawyers_video-container">
-            <video id="lawyers_video-pc" playsinline autoplay loop muted>
+            <video id="lawyers_video-pc" playsinline controls autoplay loop muted>
                 <source src="../img/lawyers2.mp4" type="video/mp4">
             </video>
-            <video id="lawyers_video-modile" playsinline autoplay loop muted>
+            <video id="lawyers_video-modile" playsinline controls autoplay loop muted>
                 <source src="../img/lawyers_mob.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>

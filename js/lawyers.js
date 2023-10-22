@@ -1,4 +1,6 @@
 import { Lawyers } from "./modules/textData";
+import { Loader } from "./modules/loader";
+
 
 const data = Lawyers();
 const body = document.querySelector('#lawyer-card_container');
@@ -31,3 +33,5 @@ data.forEach((lawyer, index) => {
 
     body.append(div);
 })
+
+Loader();
