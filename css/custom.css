@@ -323,6 +323,12 @@ body {
  /*--------------Contact Us---------------*/
  /*--------------------------------------*/
 
+ .contact-form-home {
+    background-image: url(../src/img/ben-rosett-WdJkXFQ4VHY-unsplash.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+ }
 .contact-content {
   background-color: #FEFBF4;
   width: 100%;
@@ -528,15 +534,26 @@ body {
   margin-top: 72px;
   height: 70vh;
 }
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
+}
 .lawyers_bg-img-container .main-title {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%);
-  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
   color: #fff;
   z-index: 10;
   background-size: cover;
+
 }
 .lawyers_video-container {
   height: 100%; /* Ширина для экранов шире 576px */
@@ -695,7 +712,7 @@ background-color: var(--extra-light-blue);
 }
 @media screen and (max-width: 576px) {
   .lawyers_bg-img-container .main-title {
-    font-size: 2rem;
+    font-size: 4rem;
   }
   .lawyers_video-container #lawyers_video-pc {
     display: none;

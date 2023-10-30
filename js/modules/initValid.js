@@ -36,13 +36,13 @@ function sendData(form) {
       }
      
       toggleSpinner();
-      axios.post('https://artichecker.com/Concord/myapi/sendRequest', data)
+      axios.post('https://artichecker.com/Concord/myapi/sendRequestHome', data)
             .then(res => {
   
               form.reset();
               $('#form').removeClass('was-validated');
               toggleSpinner();
-              Success();
+              //Success();
               
           }).catch(function(error){
             toggleSpinner();
@@ -52,9 +52,9 @@ function sendData(form) {
                   error.response.data.error) {
 
                   console.log("" + error.response.data.error);
-                  Danger("" + error.response.data.error);
+                  alert("" + error.response.data.error);
               } else {
-                  Danger('Error 500. Server error');
+                  console.log(error);
               }
           }).finally(() => $('.toast').toast('show')) 
       

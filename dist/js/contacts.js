@@ -51,13 +51,13 @@ function sendData(form) {
       }
      
       toggleSpinner();
-      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('https://artichecker.com/Concord/myapi/sendRequest', data)
+      axios__WEBPACK_IMPORTED_MODULE_0__["default"].post('https://artichecker.com/Concord/myapi/sendRequestHome', data)
             .then(res => {
   
               form.reset();
               $('#form').removeClass('was-validated');
               toggleSpinner();
-              Success();
+              //Success();
               
           }).catch(function(error){
             toggleSpinner();
@@ -67,9 +67,9 @@ function sendData(form) {
                   error.response.data.error) {
 
                   console.log("" + error.response.data.error);
-                  Danger("" + error.response.data.error);
+                  alert("" + error.response.data.error);
               } else {
-                  Danger('Error 500. Server error');
+                  console.log(error);
               }
           }).finally(() => $('.toast').toast('show')) 
       

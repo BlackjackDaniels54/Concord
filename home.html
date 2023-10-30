@@ -125,7 +125,7 @@
         </div>
         <div class="row lower-div explore d-flex justify-content-center align-items-center">
             <div class="col-12 fade-in z-index-5 text-center">
-                <a href="#section-home-2"> <img src="https://www.alhababi.qa/imgs/arrow_down.png" alt="">
+                <a href="#section-home-2"> <img src="src/img/icons/arrow_down.png" alt="">
                     <p class="pt-3">EXPLORE OUR WEBSITE</p>
                 </a>
             </div>
@@ -167,44 +167,69 @@
         </div>
     </div>
     </section>
-<section class="position-relative mt-5">
-    <img src="https://www.alhababi.qa/storage/website-sections/1598009806_198b6ec429afd4e4d0b5ea538206166a.jpg" class="bg-img w-100" alt="">
-    <div class="py-5">
-        <div class="container  py-5  ">
-            <div class="row d-flex-align-items-center justify-content-center">
-                <div class="col-12 fade-in  text-center">
-                    <div class="p-lg-5  whatsnew-box bg-op-theme  ">
-                        <div class="p-lg-5 p-4 ">
-                            <span class="title">WHAT&#039;S NEW</span>
-                                                        <div class="new-box text-left mt-5">
-                                <a href="https://www.alhababi.qa/single-news/Internationally%20Prominent%20Alumni">
-                                    <h1>International graduates of SMU Dedman School of Law have made an impact all over the world.
-                                        <img src="https://www.alhababi.qa/imgs/Arrow-right.png" alt="">
-                                    </h1>
-                                </a>
-                            </div>
-                            <div class="">
-                                <hr>
-                            </div>
-                                                    </div>
-                        <div class="py-4">
-                            <a href="https://www.alhababi.qa/news" class="">VIEW ALL</a>
+
+
+<section class="contact-form-home pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form id="form" class="needs-validation" novalidate>
+                      <div class="col-12 col-sm-6  mb-3">
+                        <label for="validationCustom02">Email</label>
+                        <input type="email" class="form-control" name="email" id="validationCustom02" placeholder="Email"  required >
+                        <div class="valid-feedback">
+                          Looks good!
                         </div>
+                        <div class="invalid-feedback">
+                            Please provide a valid email.
+                          </div>
+                      </div>
+                      
                     </div>
-                </div>
+                    
+                      <div class="col-12 mb-3">
+                        <label for="validationCustom03">Phone</label>
+                        <input type="text" class="form-control" name="number" id="validationCustom03" placeholder="Phone number" value="+" required pattern="\+\d{1,15}$" >
+                        <div class="invalid-feedback">
+                            Please provide a valid phone number.
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                      </div>
+                    <div class="col-12 mb-3">
+                        <label >Message</label>
+                        <textarea class="form-control" rows="3" name="message" placeholder="Message"></textarea>
+
+                    </div>
+                    <div id="btn_subm_custom-container" class="d-flex justify-content-center justify-content-sm-start">
+                        <button id="btn_subm_custom" class="btn_subm_custom btn btn-primary my-5" type="submit">
+                            <i id="fa-spin_custom" class="fa-solid fa-circle-notch fa-spin fa-spin_custom" style="color:black;"></i>
+                            <span>Send form</span>
+                        </button>
+                    </div>
+                    
+                </form>
+                  
             </div>
+              
         </div>
     </div>
 </section>
 
+
 <section class="position-relative our_team-container">
-    <div class="py-5 mt-lg-4">
+    <div class="py-5">
         <div class="container  py-lg-3  ">
             <div class="row d-flex-align-items-center justify-content-center">
                 <div class="col-12 fade-in  text-center whatsnew-box2 ">
                     <span class="title text-uppercase">Our Team</span>
                     <div class="mt-5">
-                        <p><span style="background-color: transparent; color: rgb(0, 0, 0);">Our legal experts bring a wealth of experience and knowledge to our clients and contribute to the outstanding practice. With an excellent track record, cutting-edge awareness and innovative thinking, our diverse team delivers extensive and effective advice.</span></p>
+                        <p><span style="background-color: transparent; color: rgb(0, 0, 0);">
+
+                            Our diverse team offers extensive and effective advice by leveraging the wealth of experience and knowledge our legal experts bring, while maintaining an outstanding track record and staying at the forefront of legal developments through innovative thinking.
+                        
+                        </span></p>
                     </div>
                 </div>
             </div>
