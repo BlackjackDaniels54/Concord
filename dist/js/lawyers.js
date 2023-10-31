@@ -2,40 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./js/modules/loader.js":
-/*!******************************!*\
-  !*** ./js/modules/loader.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Loader: () => (/* binding */ Loader)
-/* harmony export */ });
-function Loader() {
-    const mediaElements = Array.from(document.querySelectorAll('.lawyers_video-container video, img'));
-    console.log(mediaElements);
-    let contentCounter = 0;
-    mediaElements.forEach((file, index) => {
-        if(file.tagName == 'IMG'){
-            file.addEventListener('load', (e) => {
-                contentCounter++;
-                console.log(index);
-            })
-        }else if(file.tagName == 'VIDEO') {
-            file.addEventListener('canplay', (e) => {
-                contentCounter++;
-                console.log(index);
-            })
-        }
-        
-    })
-    console.log(mediaElements.length);
-    
-}
-
-/***/ }),
-
 /***/ "./js/modules/textData.js":
 /*!********************************!*\
   !*** ./js/modules/textData.js ***!
@@ -263,7 +229,6 @@ var __webpack_exports__ = {};
   \***********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_textData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/textData */ "./js/modules/textData.js");
-/* harmony import */ var _modules_loader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/loader */ "./js/modules/loader.js");
 
 
 
@@ -300,7 +265,7 @@ data.forEach((lawyer, index) => {
     body.append(div);
 })
 
-;(0,_modules_loader__WEBPACK_IMPORTED_MODULE_1__.Loader)();
+
 
 })();
 

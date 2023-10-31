@@ -1,5 +1,5 @@
 import { Lawyers } from "./modules/textData";
-import { Loader } from "./modules/loader";
+
 
 
 const data = Lawyers();
@@ -34,4 +34,4 @@ data.forEach((lawyer, index) => {
     body.append(div);
 })
 
-Loader();
+

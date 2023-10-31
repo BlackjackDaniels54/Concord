@@ -1,8 +1,6 @@
 /*----------Preloader-----------*/
 /*------------------------------*/
-body {
- 
-}
+
 .loader-container {
   display: none;
   position: fixed;
@@ -46,7 +44,7 @@ body {
     background-color: var(--dark-blue);  
 }
 .our_team-container {
-    background-color: var(--extra-light-blue);
+    background-color: var(--bs-light);
 }
 
 .info_block {
@@ -209,6 +207,10 @@ body {
 
   /*--------------Services---------------*/
  /*--------------------------------------*/
+
+ 
+
+ /*--------------------------*/
   .services_bg-img-container {
     height: 280px;
     width: 100%;
@@ -239,6 +241,7 @@ body {
   .services_bg-img-container .main-title,
   .contact_bg-img-container .main-title,
   .about_bg-img-container .main-title {
+    user-select: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -322,19 +325,45 @@ body {
 
  /*--------------Contact Us---------------*/
  /*--------------------------------------*/
-
+ 
+ .contact-form-home-inputs {
+    background-color: var(--bs-light);
+    border-radius: 2%;
+ }
  .contact-form-home {
-    background-image: url(../src/img/ben-rosett-WdJkXFQ4VHY-unsplash.webp);
+      height: 55vh;
+      position: relative;
+  }
+ .contact-form-home-parallax-img {
+    background-image: url(../src/img/lou-levit-B4op5oZ4x5Q-unsplash.webp);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    filter: brightness(0.5);
  }
+
+ 
+.contact-form-home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+ 
 .contact-content {
   background-color: #FEFBF4;
   width: 100%;
   
 }
-
+.content-form-call-to-action-text {
+  font-family: 'Gilroy';
+  font-size: 3rem;
+  color: #fff;
+  user-select: none;
+}
  .contact_bg-img-container,
  .about_bg-img-container {
   height: 280px;
@@ -371,19 +400,35 @@ body {
     font-size: 20px;
 }
 .btn_subm_custom {
-  padding: 12px 18px;
+  padding: 10px 18px;
   font-size: 20px;
   transition: all .1s !important;
+  background-color: #239eb7;
+  border-radius: 0;
+  border: none;
+}
+.btn_subm_custom:hover {
+  filter: contrast(0.85);
 }
 
+.btn_subm_custom.loading {
+  background-color: var(--extra-light-blue);
+  border: 2px solid var(--info);
+}
+
+
+.btn_subm_custom:focus, .btn_subm_custom:active {
+  box-shadow: none !important;
+}
+
+.btn_subm_custom i {
+  font-size: 22px;
+}
 .fa-spin_custom {
   display: none;
 }
 
-.btn_subm_custom i {
-  
-  font-size: 22px;
-}
+
 
 .custom_toast-container {
   top: 5%;
@@ -487,6 +532,9 @@ body {
 }
 
 @media(max-width: 991px){
+  .content-form-call-to-action-text {
+    font-size: 2rem;
+  }
   .contact-content_mapTitle {
     font-size: 25px;
   }
@@ -545,6 +593,7 @@ body {
   width: 100%;
 }
 .lawyers_bg-img-container .main-title {
+  user-select: none;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -556,7 +605,7 @@ body {
 
 }
 .lawyers_video-container {
-  height: 100%; /* Ширина для экранов шире 576px */
+  height: 100%; 
   width: 100%; /* Максимальная ширина для меньших экранов */
   position: absolute;
   top: 0;
@@ -564,10 +613,7 @@ body {
   overflow: hidden;
 }
 
-.lawyers_video-container #lawyers_video-pc {
-  
-  
-}
+
 .lawyers_video-container #lawyers_video-modile  {
     display: none;
 }
@@ -619,6 +665,10 @@ background-color: var(--extra-light-blue);
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.lawyer-info_container .lawyer-name {
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 .img-lawyer-card_container {
   overflow: hidden;
@@ -711,6 +761,12 @@ background-color: var(--extra-light-blue);
     margin-top: 40px;
 }
 @media screen and (max-width: 576px) {
+  .contact-form-home {
+    height: 100vh;
+  }
+  .content-form-call-to-action-text {
+    font-size: 1.5rem;
+  }
   .lawyers_bg-img-container .main-title {
     font-size: 4rem;
   }
@@ -823,9 +879,7 @@ background-color: var(--extra-light-blue);
     margin-top: 20px;
   }
   
-  .employee[data-id="3"] .img-lawyer-card_container img {
-    
-  }
+  
   .employee[data-id="4"] .img-lawyer-card_container img {
     transform: scale(2.8);
     margin-top: 140px;

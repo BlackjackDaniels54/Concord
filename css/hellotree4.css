@@ -1498,7 +1498,7 @@ textarea:focus,
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 103%);
 }
 .insights-index  {
-    background-color: var(--extra-light-blue);
+    background-color: var(--bs-light);
 }
 .insights-index h6 {
     color: #000000;

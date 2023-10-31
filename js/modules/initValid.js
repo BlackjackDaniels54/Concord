@@ -27,34 +27,52 @@ export function initValid() {
 
 
 function sendData(form) {
-      const data = {
-        name: form.querySelector('input[name="name"]').value,
-        email: form.querySelector('input[name="email"]').value,
-        phone: form.querySelector('input[name="number"]').value,
-        subject: form.querySelector('input[name="subject"]').value,
-        message: form.querySelector('textarea[name="message"]').value
+      const fields = ["name", "email", "phone", "subject"];
+      const data = {};
+      fields.forEach(field => {
+        if(form.querySelector(`input[name="${field}"]`)){
+            data[field] = form.querySelector(`input[name="${field}"]`).value;
+        }
+      })
+      data["message"] = form.querySelector('textarea[name="message"]').value.trim();
+      // const data2 = {
+      //   name: form.querySelector('input[name="name"]').value,
+      //   email: form.querySelector('input[name="email"]').value,
+      //   phone: form.querySelector('input[name="number"]').value,
+      //   subject: form.querySelector('input[name="subject"]').value,
+      //   message: form.querySelector('textarea[name="message"]').value
+      // }
+
+      console.log(data);
+      
+      let url = '';
+      if(document.querySelector('body').classList.contains('home')) {
+        url = 'https://artichecker.com/Concord/myapi/sendRequestHome';
+      } else {
+        url = 'https://artichecker.com/Concord/myapi/sendRequest';
       }
-     
       toggleSpinner();
-      axios.post('https://artichecker.com/Concord/myapi/sendRequestHome', data)
+      axios.post(url, data)
             .then(res => {
   
               form.reset();
               $('#form').removeClass('was-validated');
               toggleSpinner();
-              //Success();
+              Success();
               
           }).catch(function(error){
-            toggleSpinner();
+              toggleSpinner();
               if (error.response && 
                   error.response.status === 400 && 
                   error.response.data &&
                   error.response.data.error) {
 
                   console.log("" + error.response.data.error);
-                  alert("" + error.response.data.error);
+                  Danger("" + error.response.data.error);
               } else {
                   console.log(error);
+                  
+                  Danger("Bad request");
               }
           }).finally(() => $('.toast').toast('show')) 
       
@@ -62,11 +80,12 @@ function sendData(form) {
 
 function toggleSpinner() {
     $('#fa-spin_custom').toggleClass('fa-spin_custom');
-    $('#btn_subm_custom').toggleClass('btn-primary');
-    $('#btn_subm_custom').toggleClass('btn-primary-outline');
-    $('#btn_subm_custom').hasClass('btn-primary-outline') ? 
+    $('#btn_subm_custom').toggleClass('loading');
+    $('#btn_subm_custom').hasClass('loading') ? 
                           $('#btn_subm_custom span').html('Loading ...') :
-                          $('#btn_subm_custom span').html('Send form');
+                          $('#btn_subm_custom span').html('Submit');
+                          
+                          
 }
 
 
@@ -85,6 +104,10 @@ function Success(){
     toasttitle.innerText = 'Success';
     
     toastBody.innerText = 'Our Info Team will contact you as soon as possible';
+
+    setTimeout(function () {
+      toasttitle.classList.remove('toast_title-green');
+    }, 5000)
     
 }
 function Danger(message){
@@ -102,6 +125,9 @@ function Danger(message){
   toasttitle.innerText = 'Error';
   
   toastBody.innerText = message;
+  setTimeout(function () {
+    toasttitle.classList.remove('toast_title-red');
+  }, 5000)
   
 }
 

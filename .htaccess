@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Перенаправление с корня на home.html
+RewriteRule ^$ /home.html [L]
+
+# Перенаправление на страницы в папке src/pages
+RewriteRule ^contacts$ /src/pages/contact.html [L]
+RewriteRule ^services$ /src/pages/services.html [L]
+RewriteRule ^about$ /src/pages/about.html [L]
+RewriteRule ^lawyers$ /src/pages/lawyers.html [L]
+RewriteRule ^news$ /src/pages/newsPage.html [L]
